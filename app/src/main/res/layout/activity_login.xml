@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wayste.waysteprototype.LoginActivity">
+
+    <TextView
+        android:layout_width="91dp"
+        android:layout_height="25dp"
+        android:text="Login as:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.172"
+        android:id="@+id/login_textView" />
+
+    <Button
+        android:id="@+id/client_button"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:onClick="navigateToClientActivity"
+        android:text="@string/ClientButton"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_textView" />
+
+    <Button
+        android:id="@+id/collector_button"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:onClick="navigateToCollectorActivity"
+        android:text="@string/CollectorButton"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/client_button" />
+
+</android.support.constraint.ConstraintLayout>

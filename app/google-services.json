@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "103795047974",
+    "firebase_url": "https://waysteprototype.firebaseio.com",
+    "project_id": "waysteprototype",
+    "storage_bucket": "waysteprototype.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103795047974:android:aa6ce4092418459d",
+        "android_client_info": {
+          "package_name": "com.wayste.waysteprototype"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103795047974-d05pb1p9mr4q8mi4vsutqcu9k4lrrvjt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wayste.waysteprototype",
+            "certificate_hash": "2af92ea2524f6cc713e16f1be0190cf4df5146b6"
+          }
+        },
+        {
+          "client_id": "103795047974-83nkia5gp5s3k98ivjotse28d95h8o5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATUEq-4PrdNhw88bAndDoHvZcDAKAEBTE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103795047974-83nkia5gp5s3k98ivjotse28d95h8o5k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
