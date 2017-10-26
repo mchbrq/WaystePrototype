@@ -28,8 +28,8 @@ public class ClientActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client);
 
-        CheckBox bedCheckBox= (CheckBox) findViewById (R.id.checkBox_bed);
-        bedCheckBox.setOnClickListener(new View.OnClickListener() {
+        CheckBox bioCheckBox= (CheckBox) findViewById (R.id.checkBox_biodegradable);
+        bioCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TextView textView = (TextView) findViewById(R.id.textView_InvalidMessage);
@@ -39,8 +39,19 @@ public class ClientActivity extends AppCompatActivity {
             }
         });
 
-        CheckBox tireCheckBox= (CheckBox) findViewById (R.id.checkBox_tire);
-        tireCheckBox.setOnClickListener(new View.OnClickListener() {
+        CheckBox electronicWasteCheckBox= (CheckBox) findViewById (R.id.checkBox_ElectronicWastes);
+        electronicWasteCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView textView = (TextView) findViewById(R.id.textView_InvalidMessage);
+                if (((CheckBox) v).isChecked()) {
+                    textView.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        CheckBox bulkWasteCheckBox= (CheckBox) findViewById (R.id.checkBox_BulkWastes);
+        bulkWasteCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TextView textView = (TextView) findViewById(R.id.textView_InvalidMessage);
@@ -53,13 +64,17 @@ public class ClientActivity extends AppCompatActivity {
 
     public void saveRequest(View view) {
         List<String> disposeList = new ArrayList<>();
-        CheckBox bed_checkBox = (CheckBox) findViewById(R.id.checkBox_bed);
-        if(bed_checkBox.isChecked()) {
-            disposeList.add(bed_checkBox.getText().toString());
+        CheckBox bio_checkBox = (CheckBox) findViewById(R.id.checkBox_biodegradable);
+        if(bio_checkBox.isChecked()) {
+            disposeList.add(bio_checkBox.getText().toString());
         }
-        CheckBox tire_checkBox = (CheckBox) findViewById(R.id.checkBox_tire);
-        if(tire_checkBox.isChecked()) {
-            disposeList.add(tire_checkBox.getText().toString());
+        CheckBox bulkWaste_checkBox = (CheckBox) findViewById(R.id.checkBox_BulkWastes);
+        if(bulkWaste_checkBox.isChecked()) {
+            disposeList.add(bulkWaste_checkBox.getText().toString());
+        }
+        CheckBox electronic_checkBox = (CheckBox) findViewById(R.id.checkBox_ElectronicWastes);
+        if(electronic_checkBox.isChecked()) {
+            disposeList.add(electronic_checkBox.getText().toString());
         }
 
         if(disposeList.isEmpty()) {
@@ -99,7 +114,7 @@ public class ClientActivity extends AppCompatActivity {
     private void showSuccessPopupAlert() {
         final AlertDialog alertDialog = new AlertDialog.Builder(ClientActivity.this).create();
         alertDialog.setTitle("We've found a collector!");
-//        alertDialog.setMessage("We've found a collector!");
+        alertDialog.setMessage("Please prepare PHP50 for the collector. Your PHP50 will go a long way for the sustainability of the project. Help us help Mother Earth.");
         alertDialog.setButton(DialogInterface.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

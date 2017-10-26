@@ -4,9 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wayste_background"
+    android:fadingEdge="none|horizontal|vertical"
+    android:theme="@style/Platform.V11.AppCompat.Light"
     tools:context="com.wayste.waysteprototype.LoginActivity">
 
     <TextView
+        android:id="@+id/login_textView"
         android:layout_width="91dp"
         android:layout_height="25dp"
         android:text="Login as:"
@@ -17,31 +21,101 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172"
-        android:id="@+id/login_textView" />
+        app:layout_constraintVertical_bias="0.467" />
 
-    <Button
-        android:id="@+id/client_button"
-        android:layout_width="220dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="30dp"
-        android:onClick="navigateToClientActivity"
-        android:text="@string/ClientButton"
-        android:textSize="30sp"
+    <ImageView
+        android:id="@+id/imageView_logo"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_textView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wayste_icon_and_logo" />
 
     <Button
-        android:id="@+id/collector_button"
-        android:layout_width="220dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="30dp"
-        android:onClick="navigateToCollectorActivity"
-        android:text="@string/CollectorButton"
-        android:textSize="30sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/client_button" />
+        android:id="@+id/button_disposer"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="WASTE Disposer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/button_collector"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="WASTE Collector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintLeft_toRightOf="@+id/button_disposer"
+        app:layout_constraintRight_toLeftOf="@+id/button_processor" />
+
+    <Button
+        android:id="@+id/button_processor"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="WASTE Processor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/imageView_disposer"-->
+    <!--android:layout_width="75dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_marginBottom="150dp"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--app:srcCompat="@drawable/wayste_disposer" />-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/imageView_collector"-->
+    <!--android:layout_width="75dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_marginBottom="150dp"-->
+    <!--android:layout_marginLeft="120dp"-->
+    <!--android:layout_marginRight="120dp"-->
+    <!--app:srcCompat="@drawable/wayste_collector" />-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.0"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="@+id/imageView_processor"-->
+
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/imageView_processor"-->
+    <!--android:layout_width="75dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_marginBottom="150dp"-->
+    <!--android:layout_marginRight="0dp"-->
+    <!--app:srcCompat="@drawable/wayste_processor" />-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/imageButton3"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:srcCompat="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_000"-->
+    <!--tools:layout_editor_absoluteX="95dp"-->
+    <!--tools:layout_editor_absoluteY="405dp" />-->
+
 
 </android.support.constraint.ConstraintLayout>

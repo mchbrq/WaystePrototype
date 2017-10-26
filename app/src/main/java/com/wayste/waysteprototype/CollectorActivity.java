@@ -18,6 +18,7 @@ public class CollectorActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.out.println("CollectorActivity.....");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collector);
 

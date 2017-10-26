@@ -2,4 +2,8 @@
     <string name="app_name">WaystePrototype</string>
     <string name="CollectorButton">Collector</string>
     <string name="ClientButton">Client</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
